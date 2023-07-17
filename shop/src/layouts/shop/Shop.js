@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import ItemCard from "../../components/item-card/ItemCard";
-import { getProductsWithType } from "../../utils/APIutils";
+import { getProducts } from "../../utils/APIutils";
 
 const Shop = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
     const setType = "WHOLESALE";
-    getProductsWithType(setType, setItems);
+    getProducts(setType, setItems);
   }, []);
 
   return (
